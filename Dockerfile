@@ -1,12 +1,10 @@
-FROM ubuntu:14.04 
+FROM justcontainers/base-alpine:latest
 
-COPY . /src
+RUN  apk update && apk add curl
+RUN  apk add nodejs
 
-RUN  apt-get install -y curl
-RUN  curl -sL https://deb.nodesource.com/setup | sudo bash -
-RUN  apt-get install -y nodejs
-RUN  cd /src; npm install
+RUN mkdir -p /src 
 
-CMD ["node", "/src/index.js"]
+CMD ["echo", "harrow"]
 
 EXPOSE  8080
