@@ -7,6 +7,6 @@ RUN  curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN  apt-get install -y nodejs
 RUN  cd /src; npm install
 
-CMD ["node", "/src/index.js"]
+CMD ["echo", "harrow"]
 
 EXPOSE  8080
