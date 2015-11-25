@@ -1,6 +1,6 @@
 matrix:
   allow_failures:
-    - rvm: 1.9.3
-    
+    - node_js: 0.10.24
+
 script:
   - true
